@@ -10,13 +10,15 @@
   </head>
 
   <body>
+  <div class="contents">
     <header class="header">
       <div class="header__bar row">
         <h1 class="grid-6"><a href="/">BIG3RANKING</a></h1>
+
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
-            <%= link_to "投稿する", new_ranking_path, class: "post" %>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <%= link_to "投稿する", new_weight_path, class: "post" %>
+            <%= link_to "ログアウト", destroy_user_session_path, class: "post", method: :delete %>
           </div>
         <% else %>
           <div class="grid-6">
@@ -24,9 +26,11 @@
             <%= link_to "新規登録", new_user_registration_path, class: "post" %>
           </div>
         <% end %>
+
       </div>
     </header>
     <%= yield %>
+  </div>
     <footer>
       <p>
         Copyright BIG3RANKING 2023.

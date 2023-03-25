@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  background-color: aqua;
+}
+
+.category-name {
+  color: yellow;
+}

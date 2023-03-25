@@ -11,4 +11,5 @@ class User < ApplicationRecord
   validates_format_of :password, with: VALID_PASSWORD_REGEX, message: 'Include both letters and numbers'
 
   has_many :rankings
+  has_many :weights
 end

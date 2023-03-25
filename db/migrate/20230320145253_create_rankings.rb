@@ -1,10 +1,8 @@
 class CreateRankings < ActiveRecord::Migration[6.0]
   def change
     create_table :rankings do |t|
-      t.integer    :weight,             null: false
-      t.integer    :category_id,        null: false
+      t.references :weight,             null: false, foreign_key: true
       t.references :user,               null: false, foreign_key: true
-
       t.timestamps
     end
   end

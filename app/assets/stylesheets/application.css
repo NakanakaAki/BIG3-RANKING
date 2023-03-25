@@ -14,9 +14,36 @@
  *= require_self
  */
 
- body{
-  width: 100%;
-  max-width: 1280px;
+ .contents {
+  width: 100vw;
+  height: 90vh;
   margin: 0 auto;
   text-align:center;
+  position: relative;
+  padding-bottom: 120px;
+  box-sizing: border-box;
+
 }
+
+.header__bar {
+  height: 10vh;
+
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+.post {
+  color:black
+}
+
+ a {
+  color: black;
+ }

@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="weights.css">
+
+<h2>ベンチプレス</h3>
+  <% if @category_bench_rankings %> 
+    <% @category_bench_rankings.each.with_index(1) do |weight, i| %>
+      <div class="ranking">
+        <div class="holder">
+        <div class="score">
+          <h3>第<%= i %>位</h3>
+        </div>
+          <%= weight.weight %>kg
+          <%= weight.user.nickname %>さん
+        </div>
+      </div>
+    <% end %>
+  <% end %>
