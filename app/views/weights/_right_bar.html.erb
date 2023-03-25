@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="weights.css">
+
+<div class="category-name">
+  <h2>デッドリフト</h2>
+</div>
+    <% if @category_deadlift_rankings %> 
+      <% @category_deadlift_rankings.each.with_index(1) do |weight, i| %>
+        <div class="ranking">
+          <div class="holder">
+          <div class="score">
+            <h3>第<%= i %>位</h3>
+          </div>
+            <%= weight.weight %>kg
+            <%= weight.user.nickname %>さん
+          </div>
+        </div>
+      <% end %>
+    <% end %>
